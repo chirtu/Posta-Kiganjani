@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
 import '../pages/dashboardpage.dart';
+import '../pages/incoming.dart';
+import '../pages/labpage.dart';
 import '../welcome/login.dart';
 
 class mainscreen extends StatefulWidget {
@@ -19,10 +21,10 @@ class _mainscreenState extends State<mainscreen> {
   List<Widget> _buildScreens() {
     return [
       dashboard(),
-      Register(),
-      Register(),
-      Register(),
-      Register(),
+      pf(),
+      lab(),
+      lab(),
+      login(),
     ];
   }
 

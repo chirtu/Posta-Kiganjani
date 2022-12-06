@@ -155,11 +155,17 @@ class _RegisterState extends State<Register> {
                        ],
                      ),
                       const SizedBox(height: 20,),
-                   MaterialButton(
-                     onPressed: null,
-                      color: kprimarycolor,
-                      child: Container(
-                          child: Text(" SIGN UP",style: TextStyle(color: kprimarycolor),)),),
+                   Container(
+                     width: 150,
+                     decoration: BoxDecoration(
+                       borderRadius: BorderRadius.all(Radius.circular(20)),
+                       color: kprimarycolor,
+                     ),
+                     child: MaterialButton(
+                       onPressed: null,
+                       child: Text(" SIGN UP",style: TextStyle(color: kwhite),),
+                     ),
+                   ),
                     ],
                   ),
                 ),
@@ -171,7 +177,7 @@ class _RegisterState extends State<Register> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Icon(Icons.house_sharp,size: 30,color: kprimarycolor,),
-                    Text("have an account ? ",style: TextStyle(color: kprimarycolor,fontSize: 17),),
+                    Text("have an account ? ",style: TextStyle(color: kprimarycolor,fontSize: 16),),
                     InkWell(
                       child: Text("Sign In"),
                       onTap: (){

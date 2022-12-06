@@ -80,11 +80,16 @@ class _loginState extends State<login> {
                         ),
                       ),
                       const SizedBox(height: 20,),
-                      MaterialButton(
-                        onPressed: null,
-                        color: kprimarycolor,
-                        child: Container(
-                            child: Text(" LOGIN",style: TextStyle(color: kprimarycolor),)),),
+                      Container(
+                        width: 150,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                          color: kprimarycolor,
+                        ),
+                        child: MaterialButton(
+                          onPressed: null,
+                          child: Text(" LOGIN",style: TextStyle(color: kwhite),),),
+                      ),
                     ],
                   ),
                 ),
@@ -96,7 +101,7 @@ class _loginState extends State<login> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Icon(Icons.house_sharp,size: 30,color: kprimarycolor,),
-                    Text("New User ? ",style: TextStyle(color: kprimarycolor,fontSize: 17),),
+                    Text("New User ? ",style: TextStyle(color: kprimarycolor,fontSize: 16),),
                     InkWell(child: Text("Sign Up"),
                       onTap: (){
                         Navigator.push(context, MaterialPageRoute(builder: (context)=>Register()));

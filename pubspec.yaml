@@ -38,6 +38,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   persistent_bottom_nav_bar:
   carousel_slider:
+  qr_code_scanner:
 
 dev_dependencies:
   flutter_test:
