@@ -1,4 +1,5 @@
 import 'package:chituposta/constants/constants.dart';
+import 'package:chituposta/welcome/login.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -31,17 +32,19 @@ class _RegisterState extends State<Register> {
                   color: kprimarycolor,
                 ),
               ),
-
               Card(
-                elevation: 5,
+                elevation: 9,
                 shadowColor: kblack,
                 child: Container(
-                  height: MediaQuery.of(context).size.height,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30)),
+                  ),
+                  height: 550,
                   width:350,
                   child: Column(
                     children: [
-                      Text("image here"),
-                      SizedBox(height: 20,),
+                      Image(image: AssetImage("assets/lo.jpg")),
+                      SizedBox(height: 6,),
                       Padding(
                         padding: const EdgeInsets.only(right: 20,left: 20,),
                         child: Container(
@@ -113,42 +116,69 @@ class _RegisterState extends State<Register> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text("  Password",style:TextStyle(color: kprimarycolor),),
-                              Icon(Icons.remove_red_eye_outlined,color: kprimarycolor,)
+                              Icon(Icons.remove_red_eye,color: kprimarycolor,)
                             ],
                           ),
                         ),
                       ),
-                     RadioListTile(
-                       selectedTileColor: kprimarycolor,
-                       title: const Text('Driver'),
-                        groupValue: _regItem,
-                        value: RegItem.driver,
-                        onChanged: (RegItem? value){
-                          setState(() {
-                            _regItem = value!;
-                          });
-                        },
+                     Row(
+                       children: [
+                         Radio(
+                            activeColor: kprimarycolor,
+                           materialTapTargetSize: MaterialTapTargetSize.padded,
+                           groupValue: _regItem,
+                            value: RegItem.driver,
+                           splashRadius: 90.0,
+                           onChanged: (RegItem? value){
+                              setState(() {
+                                _regItem = value!;
+                              });
+                            },
+                          ),
+                         const Text('Driver'),
+                         SizedBox(width: 10,),
+                         Radio(
+                           activeColor: kprimarycolor,
+                           groupValue: _regItem,
+                            splashRadius: 90.0,
+                            materialTapTargetSize: MaterialTapTargetSize.padded,
+                            value: RegItem.client,
+                            onChanged: (RegItem? value){
+                              setState(() {
+                                _regItem = value!;
+                              });
+                            },
 
-                      ),
-                     RadioListTile(
-                       selectedTileColor: kprimarycolor,
-                       title: const Text('Client'),
-                        groupValue: _regItem,
-                        value: RegItem.client,
-                        onChanged: (RegItem? value){
-                          setState(() {
-                            _regItem = value!;
-                          });
-                        },
+                          ),
+                         const Text('Client'),
 
-                      ),
+                       ],
+                     ),
                       const SizedBox(height: 20,),
-                   MaterialButton(onPressed: null,
+                   MaterialButton(
+                     onPressed: null,
                       color: kprimarycolor,
                       child: Container(
-                          child: const Text(" SIGN UP")),)
+                          child: Text(" SIGN UP",style: TextStyle(color: kprimarycolor),)),),
                     ],
                   ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 80.0,right: 80,top: 6),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(Icons.house_sharp,size: 30,color: kprimarycolor,),
+                    Text("have an account ? ",style: TextStyle(color: kprimarycolor,fontSize: 17),),
+                    InkWell(
+                      child: Text("Sign In"),
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>login()));
+                      },
+                    )
+                  ],
                 ),
               )
             ],

@@ -1,3 +1,4 @@
+import 'package:chituposta/screens/mainscreen.dart';
 import 'package:chituposta/welcome/register.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:Register()
+      home:mainscreen()
     );
   }
 }
