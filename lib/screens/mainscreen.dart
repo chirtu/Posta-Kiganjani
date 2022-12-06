@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
+import '../pages/dashboardpage.dart';
 import '../welcome/login.dart';
 
 class mainscreen extends StatefulWidget {
@@ -17,7 +18,7 @@ class _mainscreenState extends State<mainscreen> {
    PersistentTabController _controller = PersistentTabController(initialIndex: 0);
   List<Widget> _buildScreens() {
     return [
-      login(),
+      dashboard(),
       Register(),
       Register(),
       Register(),
