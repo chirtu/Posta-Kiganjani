@@ -2,6 +2,8 @@ import 'package:chituposta/constants/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../accessories/slider.dart';
+
 class dashboard extends StatefulWidget {
   const dashboard({Key? key}) : super(key: key);
 
@@ -10,6 +12,11 @@ class dashboard extends StatefulWidget {
 }
 
 class _dashboardState extends State<dashboard> {
+  final List<String> imgList = [
+    'assets/cas.png',
+    'assets/cas.png',
+    'assets/cas.png',
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -86,8 +93,8 @@ class _dashboardState extends State<dashboard> {
                      child: Column(
                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                        children: [
-                         Image.asset("assets/p.png"),
-                         Text("Post Box",style: TextStyle(fontSize: 14,color: kprimarycolor),)
+                         Image.asset("assets/h.png"),
+                         Text("Estate",style: TextStyle(fontSize: 14,color: kprimarycolor),)
                        ],
                      ),
                    ),
@@ -106,8 +113,86 @@ class _dashboardState extends State<dashboard> {
                      ),
                    ),
                  ),
+                  Card(
+                   elevation: 9,
+                   shadowColor: kblack,
+                   surfaceTintColor: kblack,
+                   child: Container(
+                     child: Column(
+                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                       children: [
+                         Image.asset("assets/d.png"),
+                         Text("Delivery",style: TextStyle(fontSize: 14,color: kprimarycolor),)
+                       ],
+                     ),
+                   ),
+                 ),
+                  Card(
+                   elevation: 9,
+                   shadowColor: kblack,
+                   surfaceTintColor: kblack,
+                   child: Container(
+                     child: Column(
+                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                       children: [
+                         Image.asset("assets/d.png"),
+                         Text("Pickup",style: TextStyle(fontSize: 14,color: kprimarycolor),)
+                       ],
+                     ),
+                   ),
+                 ),
                 ],
               ),
+              GridView.count(
+                shrinkWrap: true,
+                primary: false,
+                padding: const EdgeInsets.all(0),
+                // crossAxisSpacing: 5,
+                mainAxisSpacing: 2,
+                crossAxisCount: 2,
+                children: <Widget>[
+                 Card(
+                   elevation: 9,
+                   shadowColor: kblack,
+                   surfaceTintColor: kblack,
+                   child: Container(
+                     child: Column(
+                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                       children: [
+                         Image.asset("assets/cas.png"),
+                         Text("Postal Cash",style: TextStyle(fontSize: 14,color: kprimarycolor),)
+                       ],
+                     ),
+                   ),
+                 ),
+                 Card(
+                   elevation: 9,
+                   shadowColor: kblack,
+                   surfaceTintColor: kblack,
+                   child: Container(
+                     child: Column(
+                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                       children: [
+                         Image.asset("assets/f.png"),
+                         Text("Control Number",style: TextStyle(fontSize: 14,color: kprimarycolor),)
+                       ],
+                     ),
+                   ),
+                 ),
+
+                ],
+              ),
+              SizedBox(height: 20,),
+              Text("Posta News",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,color: kprimarycolor),),
+              SizedBox(height: 10,),
+              Divider(
+                height: 6,
+                thickness: 3,
+                color: kyellow,
+              ),
+              SizedBox(height: 10,),
+              CarouselWithDotsPage(imgList: imgList),
+
             ],
           ),
         ),
