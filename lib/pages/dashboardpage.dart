@@ -207,7 +207,6 @@ class _dashboardState extends State<dashboard> {
               ),
               SizedBox(height: 10,),
               CarouselWithDotsPage(imgList: imgList),
-
             ],
           ),
         ),
