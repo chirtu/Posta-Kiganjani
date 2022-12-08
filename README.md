@@ -2,7 +2,7 @@ this is a Cloned Version of Posta kiganjani mobile app/ both ios and android.
 
 Technology used: Flutter
 
-![img.png](img.png)
+![assets/d.png](d.png)
 ![img_1.png](img_1.png)
 <img alt="img_2.png" height="200" src="img_2.png" width="200"/>
 ![img_3.png](img_3.png)
