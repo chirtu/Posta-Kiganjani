@@ -1,3 +1,8 @@
+/*
+* Developed by Fatuma chitu,
+* https://github.com/chirtu
+* email. chitufatuma45@gmail.com
+* */
 import 'package:chituposta/screens/mainscreen.dart';
 import 'package:flutter/material.dart';
 

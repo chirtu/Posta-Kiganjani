@@ -1,3 +1,5 @@
+// Copyright (c) <2022> <Fatuma chitu, chitufatuma45@gmail.com>
+
 import 'package:chituposta/constants/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

@@ -1,3 +1,5 @@
+// Copyright (c) <2022> <Fatuma chitu, chitufatuma45@gmail.com>
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
@@ -28,37 +30,7 @@ class _CarouselWithDotsPageState extends State<CarouselWithDotsPage> {
               fit: BoxFit.cover,
               width: 600,
             ),
-            // Positioned(
-            //   bottom: 0.0,
-            //   left: 0.0,
-            //   right: 0.0,
-            //   child: Container(
-            //     height: 120,
-            //     decoration: const BoxDecoration(
-            //       gradient: LinearGradient(
-            //         colors: [
-            //           Color.fromARGB(200, 255, 69, 69),
-            //           Color.fromARGB(0, 0, 0, 0),
-            //         ],
-            //         begin: Alignment.bottomCenter,
-            //         end: Alignment.topCenter,
-            //       ),
-            //     ),
-            //     padding: const EdgeInsets.symmetric(
-            //       horizontal: 20,
-            //       vertical: 10,
-            //     ),
-            //     child: const Text(
-            //       'KAMA UNA TATIZO LOLOTE KWENYE UPIMAJI WA SAMPULI ZA HIV EQA AU KUTUMA MAJIBU YA HIV EQA PIGA SIMU ZIFUATAZO; '
-            //           '\n 0710xxxxxx au 0711xxxxxx',
-            //       style: TextStyle(
-            //         color: Colors.black,
-            //         fontSize: 12.0,
-            //         fontWeight: FontWeight.bold,
-            //       ),
-            //     ),
-            //   ),
-            // ),
+
           ],
         ),
       ),
@@ -67,17 +39,6 @@ class _CarouselWithDotsPageState extends State<CarouselWithDotsPage> {
 
     return Column(
       children: [
-        // Padding(
-        //   padding: EdgeInsets.only(top: 1, left: 20, right: 20,),
-        //   child: Text(
-        //     "Our Services",
-        //     style: TextStyle(
-        //       color: Colors.green[700],
-        //       fontWeight: FontWeight.bold,
-        //       fontSize: 18,
-        //     ),
-        //   ),
-        // ),
         CarouselSlider(
           items: imageSliders,
           options: CarouselOptions(
