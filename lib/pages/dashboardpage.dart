@@ -136,7 +136,10 @@ class _dashboardState extends State<dashboard> {
                  ),
                   ),
                   InkWell(
-                     child: Card(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>  login()));
+                    },
+                    child: Card(
                      elevation: 9,
                      shadowColor: kblack,
                      surfaceTintColor: kblack,
