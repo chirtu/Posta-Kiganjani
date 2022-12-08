@@ -1,5 +1,6 @@
 import 'package:chituposta/constants/constants.dart';
 import 'package:chituposta/pages/virtualpage.dart';
+import 'package:chituposta/welcome/login.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -134,34 +135,41 @@ class _dashboardState extends State<dashboard> {
                      ),
                  ),
                   ),
-                  Card(
-                   elevation: 9,
-                   shadowColor: kblack,
-                   surfaceTintColor: kblack,
-                   child: Container(
-                     child: Column(
-                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                       children: [
-                         Image.asset("assets/d.png"),
-                         Text("Delivery",style: TextStyle(fontSize: 14,color: kprimarycolor),)
-                       ],
+                  InkWell(
+                     child: Card(
+                     elevation: 9,
+                     shadowColor: kblack,
+                     surfaceTintColor: kblack,
+                     child: Container(
+                       child: Column(
+                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                         children: [
+                           Image.asset("assets/d.png"),
+                           Text("Delivery",style: TextStyle(fontSize: 14,color: kprimarycolor),)
+                         ],
+                       ),
                      ),
-                   ),
                  ),
-                  Card(
-                   elevation: 9,
-                   shadowColor: kblack,
-                   surfaceTintColor: kblack,
-                   child: Container(
-                     child: Column(
-                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                       children: [
-                         Image.asset("assets/d.png"),
-                         Text("Pickup",style: TextStyle(fontSize: 14,color: kprimarycolor),)
-                       ],
+                  ),
+                  InkWell(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>  login()));
+                    },
+                    child: Card(
+                     elevation: 9,
+                     shadowColor: kblack,
+                     surfaceTintColor: kblack,
+                     child: Container(
+                       child: Column(
+                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                         children: [
+                           Image.asset("assets/d.png"),
+                           Text("Pickup",style: TextStyle(fontSize: 14,color: kprimarycolor),)
+                         ],
+                       ),
                      ),
-                   ),
                  ),
+                  ),
                 ],
               ),
               GridView.count(
